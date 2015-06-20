@@ -1,0 +1,15 @@
+- form_tag "/", :method => 'get' do
+  = hidden_field_tag "q", "1"
+
+  .fr.relative
+    %p
+      = text_field_tag :city, "", :title => "Search City...", :placeholder =>'Enter city name', :id =>'city', :autocomplete=>"off"
+      = select_tag( :state, options_for_select(State::STATES.unshift(["Select a state",""])), :id=>'state')
+      = submit_tag "Search"
+      #city_result.absolute{:style=>'display:none'}
+  .clear
+
+  .align-right.submit-btn
+    .align-left.fl.text-search-link
+      %a{:href=>'http://geogems.herokuapp.com/'} go to GeoGems in Lists (no map)
+    .clear

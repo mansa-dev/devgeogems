@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @trivia_item.content %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @trivia_item.category.try(:name) %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%= @trivia_item.source.try(:title) %>
+</p>
+
+<p>
+  <b>Contributor:</b>
+  <%= @trivia_item.contributor.try(:name) %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @trivia_item.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @trivia_item.state %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @trivia_item.country %>
+</p>
+
+
+<%= link_to 'Edit', edit_trivia_item_path(@trivia_item) %> |
+<%= link_to 'Back', trivia_items_path %>

@@ -1,0 +1,18 @@
+- @trivia_items.group_by(&:location_string).each do |location, trivia_items|
+  .location= location
+  %ul
+    - trivia_items.each do |trivia_item|
+      - if (trivia_item.category && trivia_item.category.name == "Funny Name")
+        %li{:style=>'list-style-type: none;'}
+          .content= trivia_item.content
+          - if trivia_item.category && trivia_item.category.name == "Funny Name"
+            = '(funny name)'
+      - else
+        %li[trivia_item]
+          .content= trivia_item.content
+          - if trivia_item.category && trivia_item.category.name == "Funny Name"
+            = 'funny name'
+          - if trivia_item.source
+            .source
+              %i
+                = trivia_item.source.title

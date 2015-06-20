@@ -1,0 +1,9 @@
+<ul id="searched_cities" class="dropdown-menu">
+  <% if @result.empty? %>
+        <center>- No results-</center>
+  <% else%>
+      <% @result.each do |city| %>
+        <li data-value="<%= city.state %>"><%= "#{city.location_string}" %></li>
+      <% end %>
+  <% end %>
+</ul>

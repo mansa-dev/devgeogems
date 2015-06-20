@@ -1,0 +1,395 @@
+@font-face {
+  font-family: "logo_font";
+  src: url(Raleway-Bold.otf);
+}
+
+@font-face {
+  font-family: "tag_line";
+  src: url(Raleway-Regular.otf);
+}
+
+body {
+  background:url('../images/pattren_2.png') repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#search_wrapper {
+  width: 640px;
+  height: 480px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+}
+
+.map_watermark{
+  color: #787878;
+  left: 214px;
+  text-shadow: 3px 3px #bbbbbb;
+  top: 160px;
+  z-index: 9;
+}
+
+#trivia .trivia_content {
+  text-align: left;
+  font-family: "tag_line";
+  height: 98%;
+  display: block;
+  overflow-y: auto;
+  width: 96%;
+  padding: 5px;
+}
+
+.trivia_content{
+  color: #4a4a4a;
+  font-family: "tag_line";
+  background: #ebebeb;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+label{
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.fl
+{
+  float: left;
+}
+
+.fr
+{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+
+.align-right{
+  text-align: right;
+}
+
+.submit-btn{
+  min-width: 50px;
+}
+
+.map-container{
+  margin-top: 20px;
+}
+
+.grid70{
+  width: 68%;
+}
+
+.grid30{
+  width: 25%;
+}
+.mar-none{
+  margin: 0;
+}
+.mar-left-20 {
+  margin-left: 20px;
+}
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+.form-container{
+  padding-right: 50px;
+}
+
+.logo{
+  font-size: 55px;
+  font-family: 'logo_font';
+  color: #ff0000;
+  margin:20px 0px 25px;
+  font-style: italic;
+}
+
+.subtitle
+{
+  font-size: 17px;
+  font-family: "tag_line";
+  color: #0000ff;
+  margin:10px 0px
+}
+
+.footer{
+  padding-left: 50px;
+  text-align: center;
+  font-family: "tag_line";
+}
+
+.footer p{
+  font-family: "tag_line";
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.text-search-link{
+  font-size: 15px;
+  padding: 10px 0 0 70px;
+  margin-left: 280px;
+}
+
+#loader{
+  z-index: 99;
+  top:160px;
+  left: 260px;
+}
+
+#all_city{
+  height: 610px;
+  width: 500px;
+}
+
+#city_result
+{
+  background: none repeat scroll 0 0 padding-box #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+  height: 120px;
+  left: 0;
+  overflow-y: auto;
+  top: 45px;
+  width: 190px;
+  z-index: 99;
+}
+
+#searched_cities,#searched_cities li
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#searched_cities li
+{
+  font-family: 'tag_line';
+  padding: 5px 10px;
+}
+
+#searched_cities li:hover{
+  background: #edeef0;
+  cursor: pointer;
+}
+
+
+#map_canvas_home, #map_canvas {
+  height: 431px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  box-shadow: 2px 2px 2px 2px #edeef0;
+}
+
+#map_canvas_home{
+  /*background-image: url("../images/usa_default.png");*/
+  /*background-position: -198px -78px;*/
+  /*background-repeat: no-repeat;*/
+}
+
+#trivia_home, #trivia{
+  height: 431px;
+  padding: 5px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  box-shadow: 2px 2px 2px 2px #edeef0;
+}
+
+#pages_content_home{
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  box-shadow: 2px 2px 2px 2px #edeef0;
+}
+
+.pages_content{
+  color: #4a4a4a;
+  font-family: "tag_line";
+  background: #ebebeb;
+  padding: 10px;
+  height: 390px;
+  overflow: auto;
+}
+
+#search {
+  position: absolute;
+  top: 100px;
+  left: 220px; }
+  #search input, #search select {
+    width: 250px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 1em; }
+  #search input[type="submit"] {
+    width: 100px;
+    float: right; }
+
+#small_search {
+  width: 800px;
+  margin: 0 auto 20px auto;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black; }
+  #small_search p.first {
+    margin-left: 10px; }
+  #small_search p {
+    float: left;
+    margin-right: 10px; }
+    #small_search p input {
+      width: 150px; }
+    #small_search p input[type="submit"] {
+      width: 100px; }
+
+#attr {
+  background-color: #e3f3fa;
+  position: absolute;
+  right: 3px;
+  bottom: 3px; }
+
+input.example {
+  color: #666666; }
+
+.trivia_items {
+  width: 608px;
+  margin: 0 auto; }
+  .trivia_items ul {
+    list-style-type: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+    background-color: #eeeeee; }
+    .trivia_items ul li {
+      margin: 0;
+      padding: 0; }
+  .trivia_items .trivia_item {
+    margin: 3px 0 6px 0;
+    padding-left: 1.4em;
+    background-image: url(/images/pin.png);
+    background-repeat: no-repeat;
+    background-position: 0 0.2em; }
+    .trivia_items .trivia_item .category, .trivia_items .trivia_item .contributor, .trivia_items .trivia_item .source {
+      margin-left: 1em; }
+    .trivia_items .trivia_item .source {
+      font-style: italic; }
+
+.location {
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid #cccccc;
+  padding-left: 4px; }
+
+.selfclear {
+  display: block; }
+  .selfclear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+* html .selfclear {
+  height: 1px; }
+
+
+.header{
+  background:rgba(255,255,255, 0.7);
+  border-bottom: 1px solid #c3c3c3;
+  box-shadow: 0px 2px 0px #edeef0;
+  width:100%;
+  top:0px;
+  z-index: 10;
+}
+
+input,select{
+  border: 1px solid #a8a8a8;
+  border-radius: 8px;
+  box-shadow: 0px 2px 0px #edeef0;
+  padding: 6px;
+  box-shadow: inset 0 0 5px #dedede;
+  background: #fff;
+  min-width: 150px;
+  margin-right: 10px;
+}
+
+#state
+{
+  -webkit-appearance: none;  /*Removes default chrome and safari style*/
+  -moz-appearance: none;  /*Removes default style Firefox*/
+  background: url('../images/down.png')  no-repeat;
+  background-size: contain;
+  background-position: 100% 0px;
+  min-width: 150px;
+}
+
+input[name='commit']{
+  background: #ff0000;
+  color: #fff;
+  border: 1px solid #ff0000;
+  box-shadow: none;
+  min-width: 100px;
+}
+
+
+.footer ul{
+  margin-top: 1px;
+  padding: 0;
+}
+
+.footer ul li{
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.footer ul li a{
+  color: #0000ff;
+
+}
+
+.footer ul li a:hover{
+  background: none;
+  color: darkblue;
+
+}
+
+
+.wrapper{
+  margin: 0 auto;
+}
+
+@media all and (min-width: 1120px) {
+
+  .wrapper{
+    width: 1120px;
+  }
+}
+
+@media all and (max-width: 960px) {
+
+  .wrapper{
+    width: 960px;
+  }
+}

@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %meta{:content=>"width=device-width, initial-scale=1", :name=>"viewport"}
+    %title Geogems
+    = stylesheet_link_tag :all
+    = javascript_include_tag "jquery.js"
+    = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&amp;language=en"
+    = javascript_include_tag "gmap3.js"
+    = javascript_include_tag "function.js"
+    = csrf_meta_tag
+  %body
+    %script{:type=>"text/javascript", :src=>"//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5584fc6a5d53b6ae", :async=>"async"}
+
+    .header
+      .wrapper
+        .logo-container.fl
+          %a{:href=>'/', :style=>'text-decoration:none'}
+            .logo GeoGems
+          .subtitle
+            Geographic Trivia of the USA
+        .form-container.fr= render "trivia_items/search_form"
+        .clear
+
+    = yield
+
+    .mar-top-20.footer
+      %p 
+        *** Note: Places in GeoGems may be closed, temporarily or permanently. Please check before visiting. ***
+      %h1
+        Know any good GeoGems? Email
+        %a{:href=>'mailto:geogems@yahoo.com'} geogems@yahoo.com
+        <b>Thanks!</b>
+      .center
+        %ul
+          %li
+            %a{:href=>'about'} About Us
+          %li
+            %a{:href=>'sources'} Sources
+          %li
+            %a{:href=>'relatedlinks'} Related Links

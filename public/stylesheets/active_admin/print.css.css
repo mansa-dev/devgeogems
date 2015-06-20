@@ -1,0 +1,81 @@
+/*
+Syntax error: Import directives may only be used at the root of a document.
+        on line 13 of C:/Ruby200/lib/ruby/gems/2.0.0/gems/activeadmin-0.6.0/app/assets/stylesheets/active_admin/print.css.scss
+
+8: @import "active_admin/mixins/reset";
+9: @include global-reset;
+10: 
+11: // Partials
+12: body.active_admin {
+13:   @import "active_admin/typography";
+14: }
+15: 
+16: body.active_admin {
+17:   font-family: Helvetica, Arial, sans-serif;
+18:   line-height: 150%;
+
+Backtrace:
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activeadmin-0.6.0/app/assets/stylesheets/active_admin/print.css.scss:13
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/tree/node.rb:104:in `check_child!'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/tree/node.rb:92:in `<<'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:320:in `block_contents'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:312:in `block'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:306:in `ruleset'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:329:in `block_child'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:323:in `block_contents'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:57:in `stylesheet'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/scss/parser.rb:26:in `parse'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/engine.rb:205:in `_to_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/engine.rb:178:in `block in to_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/haml/util.rb:251:in `silence_haml_warnings'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/engine.rb:178:in `to_tree'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/files.rb:44:in `tree_for'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:220:in `update_stylesheet'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:85:in `block (2 levels) in update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:78:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:78:in `block in update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:76:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:76:in `update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin.rb:50:in `check_for_updates'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/haml-3.0.17/lib/sass/plugin/rack.rb:40:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/head.rb:14:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/flash.rb:182:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activerecord-3.0.20/lib/active_record/query_cache.rb:32:in `block in call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activerecord-3.0.20/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activerecord-3.0.20/lib/active_record/query_cache.rb:12:in `cache'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activerecord-3.0.20/lib/active_record/query_cache.rb:31:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activerecord-3.0.20/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activesupport-3.0.20/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/sendfile.rb:106:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/railties-3.0.20/lib/rails/rack/logger.rb:13:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/runtime.rb:17:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/activesupport-3.0.20/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/lock.rb:13:in `block in call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/lock.rb:13:in `synchronize'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/lock.rb:13:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-3.0.20/lib/action_dispatch/middleware/static.rb:30:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/railties-3.0.20/lib/rails/application.rb:168:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/railties-3.0.20/lib/rails/application.rb:77:in `method_missing'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/railties-3.0.20/lib/rails/rack/log_tailer.rb:14:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/content_length.rb:13:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.2.8/lib/rack/handler/webrick.rb:52:in `service'
+C:/Ruby200/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+C:/Ruby200/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+C:/Ruby200/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Import directives may only be used at the root of a document.\A         on line 13 of C:/Ruby200/lib/ruby/gems/2.0.0/gems/activeadmin-0.6.0/app/assets/stylesheets/active_admin/print.css.scss\A \A 8: @import \"active_admin/mixins/reset\";\A 9: @include global-reset;\A 10: \A 11: // Partials\A 12: body.active_admin {\A 13:   @import \"active_admin/typography\";\A 14: }\A 15: \A 16: body.active_admin {\A 17:   font-family: Helvetica, Arial, sans-serif;\A 18:   line-height: 150%;"; }

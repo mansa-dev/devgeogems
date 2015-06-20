@@ -1,0 +1,77 @@
+- markers = ''
+.wrapper.content
+  .map-container.relative
+    #loader.absolute{:style=>'display:none'}
+      %img{:src=>'images/loading_icon.gif'}
+    #map_canvas.grid70.fl
+
+    #trivia.grid30.mar-left-20.fl.relative
+      .trivia_content
+        - if @trivia_items.empty?
+          Nothing found.
+        - else
+          %h3.mar-none Click on any marker to view its GeoGems
+          - @trivia_items.group_by(&:location_string).each do |location, trivia_items|
+            %ul
+              - trivia_items.each do |trivia_item|
+                - if(trivia_item.trivia_count >= 1 && trivia_item.trivia_count<=2)
+                  - marker_image = '/images/pin_3.png'
+                - elsif(trivia_item.trivia_count > 2 && trivia_item.trivia_count<=5)
+                  - marker_image = '/images/pin_2.png'
+                - else
+                  - marker_image = '/images/pin_1.png'
+
+                - markers+='{address:"'+trivia_item.city+' ,'+trivia_item.state+' ,'+trivia_item.country+'", data:{city:"'+trivia_item.city+'", state:"'+trivia_item.state+'", trivia:"'+trivia_item.trivia_count.to_s+'",}, options:{icon: "'+marker_image+'"}},'
+                -#%li[trivia_item]
+                -#  .content= trivia_item.content
+                -#  - if trivia_item.category && trivia_item.category.name != "Uncategorized"
+                -#    .category= trivia_item.category.name
+                -#  - if trivia_item.source
+                -#    .source= trivia_item.source.title
+                -#  - if trivia_item.contributor
+                -#    .contributor= trivia_item.contributor.name
+      .clear
+    .clear
+
+  %script{ :type=>'text/javascript' }
+    var a = [
+    = raw markers
+    ]
+    init_search_map(a);
+
+
+
+
+
+-#$.each( data.markers, function(i, marker) {
+-#						$('#map_canvas').gmap('addMarker', {
+-#							'position': new google.maps.LatLng(marker.latitude, marker.longitude),
+-#							'title': marker.title,
+-#							'category': marker.category,
+-#							'bounds': true
+-#						}).click(function() {
+-#							$('#map_canvas').gmap('openInfoWindow', { 'content': marker.content }, this);
+-#						});
+-#					});
+
+
+-##small_search.selfclear= render "search_form"
+-#
+-#- if @trivia_items.empty?
+-#  Nothing found.
+-#
+-#.trivia_items
+-#  - @trivia_items.group_by(&:location_string).each do |location, trivia_items|
+-#    .location= location
+-#    %ul
+-#      - trivia_items.each do |trivia_item|
+-#        %li[trivia_item]
+-#          .content= trivia_item.content
+-#          - if trivia_item.category && trivia_item.category.name != "Uncategorized"
+-#            .category= trivia_item.category.name
+-#          - if trivia_item.source
+-#            .source= trivia_item.source.title
+-#          - if trivia_item.contributor
+-#            .contributor= trivia_item.contributor.name
+-#
+-#  = will_paginate @trivia_items
